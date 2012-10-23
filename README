@@ -1,0 +1,21 @@
+Simple script to manage text notes.
+
+It requires the environment variable MEMEX_DIR to contain the name of
+the notes' directory
+
+The suggested format for the notes is:
+
+Title in the first line
+The note's text
+A line starting with "tag:" with the tags assigned to the note,
+separated with commas.
+
+Example:
+
+----------------------------------------
+Notes.txt, a simple text notes manager
+
+Notes.txt is an amazing script to manage text notes. You can add notes
+with "notes.txt add <myNote>" and list them with "notes.txt list".
+
+tags:notes, txt,script
