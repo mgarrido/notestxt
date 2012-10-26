@@ -1,6 +1,6 @@
 Simple script to manage text notes.
 
-It requires the environment variable MEMEX_DIR to contain the name of
+It requires the environment variable NOTES_DIR to contain the name of
 the notes' directory
 
 The suggested format for the notes is:

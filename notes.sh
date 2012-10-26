@@ -2,7 +2,7 @@
 
 [ -z $EDITOR ] && EDITOR=vi
 shopt -s nocasematch
-cd $MEMEX_DIR
+cd $NOTES_DIR
 LIST_CMD="ls -1t"
 
 _usage() {
@@ -15,7 +15,7 @@ _usage() {
 
 _editnote() {
 	ext=$([[ ! $1 =~ \.txt$ ]] && echo ".txt")
-	notefile=$MEMEX_DIR/${1}${ext}
+	notefile=$NOTES_DIR/${1}${ext}
 	if [ -f $notefile ]
 	then
 		$EDITOR $notefile
@@ -31,7 +31,7 @@ _addnote() {
 	notename=$(echo $1 | tr [:blank:]  _)
 	ext=$([[ ! $notename =~ \.txt$ ]] && echo ".txt")
 	
-	notefile=$MEMEX_DIR/${notename}${ext}
+	notefile=$NOTES_DIR/${notename}${ext}
 
 	# Check if already exists a note with the given name
 	if [ -f $notefile ]
